@@ -2,6 +2,8 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: helm-guestbook
+  labael:
+    argocd.argoproj.io/managed-by: tekton-pipelines
   annotations:
     argocd.argoproj.io/sync-wave: "-1"
 ---
@@ -9,6 +11,8 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: helm-hooks
+  labael:
+    argocd.argoproj.io/managed-by: tekton-pipelines  
   annotations:
     argocd.argoproj.io/sync-wave: "-1"
 ---
@@ -16,6 +20,8 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: kustomize-guestbook
+  labael:
+    argocd.argoproj.io/managed-by: tekton-pipelines
   annotations:
     argocd.argoproj.io/sync-wave: "-1"
 ---
@@ -23,5 +29,7 @@ apiVersion: v1
 kind: Namespace
 metadata:
   name: sync-waves
+  labael:
+    argocd.argoproj.io/managed-by: tekton-pipelines
   annotations:
     argocd.argoproj.io/sync-wave: "-1"
