@@ -2,12 +2,12 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: helm-hooks
-  namespace: tekton-pipelines
+  namespace: alfa
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: helm-hooks
+    namespace: alfa
     server: {{ .Values.spec.destination.server }}
   project: default
   source:

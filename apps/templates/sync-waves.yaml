@@ -2,12 +2,12 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: sync-waves
-  namespace: tekton-pipelines
+  namespace: alfa
   finalizers:
   - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
-    namespace: sync-waves
+    namespace: alfa
     server: {{ .Values.spec.destination.server }}
   project: default
   source:
